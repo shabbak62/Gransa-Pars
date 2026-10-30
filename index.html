@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gransa-Pars</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mySwiper .swiper-slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mySwiper2 .swiper-slide2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mySwiper2 .swiper-wrapper .swiper-slide img {
+      width: 90px !important;
+      height: 90px !important;
+      object-fit: contain !important;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <body>
+    <div class="w-full mx-auto">
+      <!-- mainPage -->
+
+      <!-- header -->
+
+      <!-- menu -->
+      <div
+        class="navbar bg-base-100 w-[90%] mx-auto sticky top-0 z-50 rounded-2xl shadow-amber-600 shadow-lg"
+      >
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl">
+            <img class="w-20 h-16.25 p-2" src="./src/image/logo.png" />
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex font-semibold">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+              <details>
+                <summary>Projects</summary>
+                <ul class="p-2 bg-base-100 w-40 z-1">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Services</summary>
+                <ul class="p-2 bg-base-100 w-40 z-1">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+
+            <li><a>Teams</a></li>
+            <li><a>AboutUs</a></li>
+            <li><a>ContactUs</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end flex gap-1.5">
+          <a
+            href="/"
+            class="w-fit bg-[#007f90] text-[#be9634] font-bold p-2 rounded-full shadow-md text-[12px]"
+            >EN</a
+          >
+          <a
+            href="./gransa-fa"
+            class="w-fit text-[#007f90] shadow-[#be9634] font-bold p-2 rounded-full shadow-md border text-[12px] hover:bg-[#007f90] hover:text-[#be9634]"
+            >FA</a
+          >
+        </div>
+      </div>
+
+      <!-- hero -->
+      <div
+        class="hero h-[700px] relative"
+        style="
+          background-image: url(&quot;./src/image/hero2.jpg&quot;);
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(5, 18, 25, 0.95) 0%,
+              rgba(5, 18, 25, 0.8) 35%,
+              rgba(53, 29, 3, 0.35) 65%,
+              rgba(39, 19, 2, 0.05) 100%
+            );
+          "
+        ></div>
+
+        <!-- Hero Content -->
+        <div
+          class="hero-content relative z-10 text-neutral-content text-left w-full justify-start px-10 md:px-20"
+        >
+          <div class="max-w-xl">
+            <h1 class="mb-3 text-6xl font-bold">Gransa Pars</h1>
+
+            <h1 class="mb-5 text-5xl font-bold text-[#C9A239]">Company</h1>
+
+            <p class="mb-7 text-xl leading-relaxed">
+              Building the Infrastructure for a Better Tomorrow Through
+              Experience, Expertise, and Advanced Technology, Driving the
+              Nation’s Development and Progress.
+            </p>
+
+            <div class="flex gap-3">
+              <button
+                class="w-fit p-2 bg-[#007f90] rounded-2xl border border-[#C9A239] hover:bg-[#c9a239] text-white font-semibold text-[14px]"
+              >
+                View Projects
+              </button>
+
+              <button
+                class="w-fit p-2 bg-[#007f90] rounded-2xl border border-[#C9A239] hover:bg-[#c9a239] text-white font-semibold text-[14px]"
+              >
+                About Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- aboutus -->
+      <div class="text-center mt-10 text-2xl divider">About Our Company</div>
+
+      <div class="mt-2 w-[90%] mx-auto p-4">
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          aspernatur doloribus eos, non totam quos, minus, consectetur ut
+          architecto nemo dignissimos impedit recusandae aut ipsum eaque
+          excepturi et praesentium commodi? Facere illo magni maiores eum et?
+          Placeat consequatur quod qui laboriosam aperiam a ipsum, accusamus
+          nulla possimus ex numquam molestias sed. Tempora doloremque, soluta
+          numquam dignissimos in est laboriosam? Consequatur non, sequi eaque
+          sit necessitatibus fugiat exercitationem distinctio perspiciatis
+          itaque voluptatum, qui officia explicabo in magni dolores, expedita
+          voluptate aliquam ad nobis vero. Mollitia amet in et natus fuga rerum
+          consequuntur maiores deserunt iure odit, temporibus possimus nulla
+          praesentium voluptates. Illum hic quaerat totam modi magni repudiandae
+          incidunt ab, fugiat culpa? Velit, modi error ullam commodi nesciunt
+          dolor veniam rerum fugit ipsam sint nisi dolores harum sunt iste
+          incidunt magnam eos. Nihil illo iusto explicabo laboriosam, qui odio
+          ipsa repellendus debitis nemo nobis quos eveniet cumque perspiciatis
+          dolor corporis ullam tempora suscipit veniam voluptate harum similique
+          assumenda dignissimos. Aperiam delectus et similique pariatur? Cum
+          earum nobis vitae sapiente non consequatur amet sint alias quasi.
+          Totam, fuga cum! Qui corporis harum beatae blanditiis itaque. Fugit a
+          consectetur quas itaque similique, ea, iure doloremque voluptatem
+          veniam quidem autem, laborum in vel ipsa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolores
+          ipsam, deserunt voluptates dolorum ea nemo officiis perferendis. Quis
+          mollitia perspiciatis fugit rem nihil? Atque repudiandae incidunt
+          placeat, odio consequuntur delectus asperiores blanditiis omnis
+          quibusdam modi nihil sint quod quasi amet illo dolorum. Incidunt
+          libero accusantium placeat illo molestiae magni nemo aliquid debitis
+          illum perspiciatis eos officia reprehenderit deserunt dolorem
+          temporibus a, ut perferendis obcaecati soluta rerum! Maiores ullam
+          illo animi vitae expedita atque aliquid, commodi et eum, iure odit ab
+          accusantium ratione officia at. Expedita architecto repudiandae quis
+          recusandae quaerat veniam debitis ratione, nihil quas. Nulla quam vel,
+          natus esse aliquid animi laboriosam magnam quod rerum expedita harum
+          qui? Sapiente minima accusamus porro illum perferendis vitae natus!
+          Sit ipsum minima maiores ad nihil vitae distinctio placeat fugiat ex
+          accusantium dolor ducimus voluptatibus non recusandae voluptates,
+          deleniti provident obcaecati autem. Nam illo possimus sapiente
+          doloremque iure quaerat, commodi ipsa repudiandae quia voluptatum, ea
+          ad numquam ducimus beatae ipsum labore totam aliquam doloribus cum
+          aperiam dicta laborum recusandae soluta alias. Non facere hic maiores
+          animi enim facilis voluptates, velit nostrum cum assumenda quo porro
+          numquam eveniet sit quia impedit ipsum, unde reprehenderit iste!
+          Aspernatur totam amet sint, laborum quam quibusdam distinctio!
+        </p>
+      </div>
+
+      <!-- session1 -->
+      <div class="w-[90%] mx-auto mt-10 devider">
+        <div class="divider text-2xl">Services</div>
+      </div>
+      <div class="w-[90%] mx-auto flex gap-3 mt-10">
+        <div class="w-1/3 flex p-2">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/rah.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="w-1/2 p-3">
+            <img src="./src/image/road.png" class="block size-15 mx-auto" />
+            <h2 class="font-semibold my-3">Road Constuction</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards and
+              using modern equipment.
+            </p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="w-1/3 flex p-4">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/pol.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="w-1/2 p-2">
+            <img src="./src/image/bridge.png" class="block size-15 mx-auto" />
+            <h2 class="font-semibold my-3">Constuction Projects</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards.
+            </p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="w-1/3 flex p-4">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/sad.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="w-1/2 p-2">
+            <img
+              src="./src/image/icons8-dam-50.png"
+              class="block mx-auto size-15"
+            />
+            <h2 class="font-semibold my-3">Dam Constuction</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--2 row  -->
+      <div class="divider w-[90%] mx-auto"></div>
+      <div class="w-[90%] mx-auto flex gap-3 mt-10">
+        <div class="w-1/3 flex p-2">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/tonel.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="w-1/2 p-3">
+            <img
+              src="./src/image/icons8-tunnel-48.png"
+              class="block size-15 mx-auto"
+            />
+            <h2 class="font-semibold my-3">Tunneling</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards and
+              using modern equipment.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider lg:divider-horizontal"></div>
+
+        <div class="w-1/3 flex p-4">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/channelconcrete.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="w-1/2 p-2">
+            <img src="./src/image/concret.png" class="block size-15 mx-auto" />
+            <h2 class="font-semibold my-3">Transmission Lines</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards.
+            </p>
+          </div>
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div class="w-1/3 flex p-4">
+          <div class="hover-3d items-center">
+            <!-- content -->
+            <figure class="max-w-100 rounded-2xl">
+              <img src="./src/image/petro.png" class="rounded-2xl" />
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="w-1/2 p-2">
+            <img
+              src="./src/image/Petrochemical.png"
+              class="block mx-auto size-15"
+            />
+            <h2 class="font-semibold my-3">Oil and Gas Projects</h2>
+            <p class="text-[13px] text-justify">
+              Execution of road construction projects and improvement of
+              transportation routes in compliance with the latest standards.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- our teams -->
+
+      <div class="text-center mt-10 text-2xl divider">Our Teams</div>
+
+      <div class="mt-2 w-[90%] mx-auto p-4">
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          aspernatur doloribus eos, non totam quos, minus, consectetur ut
+          architecto nemo dignissimos impedit recusandae aut ipsum eaque
+          excepturi et praesentium commodi? Facere illo magni maiores eum et?
+          Placeat consequatur quod qui laboriosam aperiam a ipsum, accusamus
+          nulla possimus ex numquam molestias sed. Tempora doloremque, soluta
+          numquam dignissimos in est laboriosam? Consequatur non, sequi eaque
+          sit necessitatibus fugiat exercitationem distinctio perspiciatis
+          itaque voluptatum, qui officia explicabo in magni dolores, expedita
+          voluptate aliquam ad nobis vero. Mollitia amet in et natus fuga rerum
+          consequuntur maiores deserunt iure odit, temporibus possimus nulla
+          praesentium voluptates. Illum hic quaerat totam modi magni repudiandae
+          incidunt ab, fugiat culpa? Velit, modi error ullam commodi nesciunt
+          dolor veniam rerum fugit ipsam sint nisi dolores harum sunt iste
+          incidunt magnam eos. Nihil illo iusto explicabo laboriosam, qui odio
+          ipsa repellendus debitis nemo nobis quos eveniet cumque perspiciatis
+          dolor corporis ullam tempora suscipit veniam voluptate harum similique
+          assumenda dignissimos. Aperiam delectus et similique pariatur? Cum
+          earum nobis vitae sapiente non consequatur amet sint alias quasi.
+          Totam, fuga cum! Qui corporis harum beatae blanditiis itaque. Fugit a
+          consectetur quas itaque similique, ea, iure doloremque voluptatem
+          veniam quidem autem, laborum in vel ipsa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolores
+          ipsam, deserunt voluptates dolorum ea nemo officiis perferendis. Quis
+          mollitia perspiciatis fugit rem nihil? Atque repudiandae incidunt
+          placeat, odio consequuntur delectus asperiores blanditiis omnis
+          quibusdam modi nihil sint quod quasi amet illo dolorum. Incidunt
+          libero accusantium placeat illo molestiae magni nemo aliquid debitis
+          illum perspiciatis eos officia reprehenderit deserunt dolorem
+          temporibus a, ut perferendis obcaecati soluta rerum! Maiores ullam
+          illo animi vitae expedita atque aliquid, commodi et eum, iure odit ab
+          accusantium ratione officia at. Expedita architecto repudiandae quis
+          recusandae quaerat veniam debitis ratione, nihil quas. Nulla quam vel,
+          natus esse aliquid animi laboriosam magnam quod rerum expedita harum
+          qui? Sapiente minima accusamus porro illum perferendis vitae natus!
+          Sit ipsum minima maiores ad nihil vitae distinctio placeat fugiat ex
+          accusantium dolor ducimus voluptatibus non recusandae voluptates,
+          deleniti provident obcaecati autem. Nam illo possimus sapiente
+          doloremque iure quaerat, commodi ipsa repudiandae quia voluptatum, ea
+          ad numquam ducimus beatae ipsum labore totam aliquam doloribus cum
+          aperiam dicta laborum recusandae soluta alias. Non facere hic maiores
+          animi enim facilis voluptates, velit nostrum cum assumenda quo porro
+          numquam eveniet sit quia impedit ipsum, unde reprehenderit iste!
+          Aspernatur totam amet sint, laborum quam quibusdam distinctio!
+        </p>
+      </div>
+      <!-- news -->
+      <div class="mt-10 w-[90%] mx-auto p-4 flex flex-col gap-5">
+        <div class="divider text-center font-semibold text-2xl">
+          Latest News & Industry Insights
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper rounded-4xl">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/image/news/g1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/image/news/g1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/image/news/g1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/image/news/g1.png" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- sesseion -->
+      <div class="divider my-10">our future ideas</div>
+
+      <div class="w-[90%] mx-auto text-justify my-10">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+          quisquam eligendi temporibus cum minus ab, ex sapiente deleniti
+          repellendus in officiis alias. Impedit modi dignissimos amet nulla
+          beatae, iusto earum dolor sunt nam quidem quos non corrupti dolorum
+          aspernatur fugit incidunt eius ullam illo accusantium maiores
+          architecto fugiat. Repudiandae neque quas magni odit! Necessitatibus
+          temporibus adipisci dolor officiis rem doloribus ut doloremque, optio
+          maiores impedit magnam blanditiis maxime officia distinctio at
+          excepturi deleniti tempora sapiente voluptatibus. Quisquam vero illo
+          nesciunt cupiditate! Nam saepe ipsam delectus tempora at quisquam
+          aliquam iusto nostrum? Corrupti, nisi. Doloribus sequi aliquam rerum
+          non expedita cumque. Qui ullam nisi eum exercitationem facere fuga
+          consequatur dignissimos sint possimus voluptas minus iusto eos itaque
+          iste veritatis, delectus ea fugit architecto at corporis sequi!
+          Officia libero architecto aspernatur deserunt voluptates voluptatibus
+          rerum voluptatum natus nulla temporibus delectus incidunt, saepe
+          minima, eius sit doloribus excepturi sunt quaerat sed? Libero rerum et
+          odio asperiores animi officiis necessitatibus id recusandae, iusto
+          quasi praesentium enim facere at magni inventore dolores. Quos
+          corporis ea eaque voluptatibus deleniti minima perferendis, nulla
+          tempore consequatur cupiditate pariatur dicta obcaecati possimus
+          laboriosam doloremque blanditiis molestias repudiandae nihil, velit,
+          incidunt minus! Veritatis temporibus, facere corrupti at nemo veniam
+          nostrum!
+        </p>
+      </div>
+      <!--karfarmaha  -->
+      <div class="divider my-10">Project Owner</div>
+      <div class="w-[90%] mx-auto">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/1.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/2.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/4.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/5.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/6.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/1.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/2.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/4.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/5.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/6.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/1.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/2.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/4.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/5.png" />
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./src/image/karfarma/6.png" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="divider my-10">Contact Us</div>
+
+    <div class="flex flex-row justify-center items-center gap-10 my-10">
+      <div class="bg-base-100">
+        <img src="./src/image/logo.png" class="w-60" />
+      </div>
+      <div class="w-60 flex flex-col gap-2">
+        <h2 class="text-xl">Contact Info</h2>
+        <div class="divider"></div>
+        <p class="text-justify">
+          Tehran,marzdaran,haghighat st,alvand building,floor 6,Number 12
+        </p>
+        <h3>021-44598652</h3>
+        <h3>021-44500652</h3>
+        <h3>Gransapars@gmail.com</h3>
+      </div>
+    </div>
+    <footer
+      class="footer footer-horizontal footer-center bg-black text-white rounded p-10 gap-4 flex flex-col justify-between"
+    >
+      <div>
+        <nav class="grid grid-flow-col gap-4">
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact Us</a>
+          <a class="link link-hover">Projects</a>
+          <a class="link link-hover">Services</a>
+          <a class="link link-hover">News</a>
+        </nav>
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                aria-label="Twitter"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                aria-label="YouTube"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                aria-label="Facebook"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <aside>
+          <p>Copyright © (2026) - All right reserved by SHABBAK CO.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 8,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 2000,
+        },
+      });
+    </script>
+  </body>
+</html>
