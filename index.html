@@ -4,13 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gransa-Pars</title>
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" crossorigin href="/Gransa-Pars/assets/index-DLS0VA_V.css">
   </head>
-  <style>.swiper{width:100%;height:100%}.swiper-slide{text-align:center;justify-content:center;align-items:center;font-size:18px;display:flex}.mySwiper .swiper-slide img{width:100%;height:100%}.mySwiper2 .swiper-slide2{justify-content:center;align-items:center;display:flex}.mySwiper2 .swiper-wrapper .swiper-slide img{flex-shrink:0;object-fit:contain!important;width:90px!important;height:90px!important}</style>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mySwiper .swiper-slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mySwiper2 .swiper-slide2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mySwiper2 .swiper-wrapper .swiper-slide img {
+      width: 90px !important;
+      height: 90px !important;
+      object-fit: contain !important;
+      flex-shrink: 0;
+    }
+  </style>
 
   <body>
     <div class="w-full mx-auto">
@@ -24,7 +56,7 @@
       >
         <div class="navbar-start">
           <a class="btn btn-ghost text-xl">
-            <img class="w-20 h-16.25 p-2" src="/Gransa-Pars/assets/logo-C5M1yBqz.png" />
+            <img class="w-20 h-16.25 p-2" src="./src/image/logo.png" />
           </a>
         </div>
         <div class="navbar-center hidden lg:flex font-semibold">
@@ -72,7 +104,7 @@
       <div
         class="hero h-[700px] relative"
         style="
-          background-image: url(&quot;/Gransa-Pars/assets/hero2-B3a6cRet.jpg&quot;);
+          background-image: url(&quot;./src/image/hero2.jpg&quot;);
           background-size: cover;
           background-position: center;
         "
@@ -185,7 +217,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/rah-D2tVMxNB.png" class="rounded-2xl" />
+              <img src="./src/image/rah.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -198,7 +230,7 @@
             <div></div>
           </div>
           <div class="w-1/2 p-3">
-            <img src="data:image/png;base64,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" class="block size-15 mx-auto" />
+            <img src="./src/image/road.png" class="block size-15 mx-auto" />
             <h2 class="font-semibold my-3">Road Constuction</h2>
             <p class="text-[13px] text-justify">
               Execution of road construction projects and improvement of
@@ -212,7 +244,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/pol-hXBvcf87.png" class="rounded-2xl" />
+              <img src="./src/image/pol.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -225,7 +257,7 @@
             <div></div>
           </div>
           <div class="w-1/2 p-2">
-            <img src="/Gransa-Pars/assets/bridge-Uk8OZc3v.png" class="block size-15 mx-auto" />
+            <img src="./src/image/bridge.png" class="block size-15 mx-auto" />
             <h2 class="font-semibold my-3">Constuction Projects</h2>
             <p class="text-[13px] text-justify">
               Execution of road construction projects and improvement of
@@ -238,7 +270,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/sad-CsoqrWq6.png" class="rounded-2xl" />
+              <img src="./src/image/sad.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -252,7 +284,7 @@
           </div>
           <div class="w-1/2 p-2">
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNklEQVR4nN2aO4gTURSGD+IDrLTIzfz/mUnATRXwARGtrS1E0FZrwcraxkKwU9fKWiwsRAvRytVmLRS0sXYVV7FVBB+oV+5uFmZlx50ZMjt3zg+HJHPIvffLJF8ml4jMKABOAvhI0m9QXwFcki4ExRD5OiSxh5tDhDorRkAuNrmAFwCeTCaTHfnj4TGABQCP/9NbGI/HOyuA3GwMBMCr6ST3VPUAgN2qepDk/dwCNu2VBHnUGEiWZXMAPmw0MYD3AJaLeiSXSgKs1WtpMv1+35G8TvItgB/hluSNcNw51w/3Sb4D8D3fGwwGe0nOVwD6IrGHJc/KcDjcIxZA0jTdLxZAVPW4Bf16kucs6NeTvGxBv57kLTGgX0/yqcQclgd5IxZAAPwUkW0Sa1jhc5JlGS3o16vqUQv69ap62oJ+PckLYkC/nuRViTWsBnJXjIA8FyMgn0zol+Sf0Wi0q/P65eqX4pwF/XpVPSYG9OtV9YzEGFY/K83tOm4xSHO7jlsM8lBmk+0r5mxJv+t2HafjLdZcx8uVH2tt6Zfk57CQOnPhn15gaE2/VedCcW/ZObevNf1O61fZudz63toaryVJ0pNZpuZZOCGxhfVAzktsYb231hUL+vUkb4fnhithAM+6qt/w1lpMkuQwgAdm9Etyqcv69dPx5sNYrqv6DdXr9RKJKawJkqbpEbEAoqqnLOjXh13HMEan9ctV69wJY7SqXxT0Onf163K98K+GohekoH4D+Darq9+/d0d58s2YE/UAAAAASUVORK5CYII="
+              src="./src/image/icons8-dam-50.png"
               class="block mx-auto size-15"
             />
             <h2 class="font-semibold my-3">Dam Constuction</h2>
@@ -270,7 +302,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/tonel-HOUWueKy.png" class="rounded-2xl" />
+              <img src="./src/image/tonel.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -285,7 +317,7 @@
 
           <div class="w-1/2 p-3">
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/klEQVR4nO1YSWsUQRSuuIAe4jLDzNT3dTktQzDqdcDlLHhwOSuKgoJ4UEQQwYvoSTyYux5ckByMiAlCEPWWKBpcUBDBH2BEcYtJJGJM5IUemDTTNd09PWai/UFd6lW9931V9d5rWqkUKVIkgmKxCACHAFwF8ILkB5LT3vgI4CXJ6ySPaK1d1SJoI7kTwAMAXz2S07Yh4gB8JvmQ5G6l1MI5YU5yM4Ahj9Qr13WX5HI5TXLcImA8n88XyuXyYpLPvbnXALb+Te6LSJ4nOVlNzhizQYwAuiyn3yVrZK3PNgXgojFmaVOZZzKZZfJcAsj1yxrLLcycvieyP8DHk8qaZpF/bHvftluwnP60b7zRWuea8WzuhUjQoFuoe/qcPZ5KTiXGnuQ5qTBSIkMEPwngMsmRqrkxAD0AzoY4hGskb5O8lAh5x3E2CgGt9TpPzA4AwwEEJgHcAbBHa70+m822F4vFlfl8vqS13gfgBslfAcSHpSRLDNd1V5B8T3JLo/zbKqVSmpCQkUljTIZkt4/EfWNMRz2HIoZkn29vt/gUu8TwGt5MPjTUJxzH2eY7pXcyV2Xf79nOxGiAJ7zyebTK33aJ4RO3K7aAoMSVN14qlZZ7T+J0XP8ATkllk6oD4ErAsxyI5dyrJLOalU/EF5J3lVILVAMg2QfghyWxpwqFwuo4jg/WqRi/K4ndCIwxHQB+2mJprQ9Hdmy50sroVQmB5K06sbrjCBiSpAqwXSB5wLL3UQ0Sg5b1e6VP1LI5jrOJ5LPIAuQbnuSaANsAyU7L3sEoyQhgLYC3tWzGGEe4RBYAYMJ2rfJtpBJCNpttr9OdJyI7rdfykyLftHipgIhgKuBfFKAi2gLqf6h+wBjxEhcQUP9D9QM2Q8C8f0JMBYQHUwE+pALmUx9AuPpv7Qecyz4Qsv5b+wHTPuBDKqAFBHxvFQEAvsVx2NtCAnriOOz0/r7VcjraBAFjAeQ/OY5j4jpdBeCm71//KIBjSQsAcFx8V8UZkZOPTT5Fiv8EfwDdDk9mFnRdNAAAAABJRU5ErkJggg=="
+              src="./src/image/icons8-tunnel-48.png"
               class="block size-15 mx-auto"
             />
             <h2 class="font-semibold my-3">Tunneling</h2>
@@ -303,7 +335,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/channelconcrete-B-Z1-fU8.png" class="rounded-2xl" />
+              <img src="./src/image/channelconcrete.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -316,7 +348,7 @@
             <div></div>
           </div>
           <div class="w-1/2 p-2">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuElEQVR4nO3WSUoDQRgF4J844UCQhqTrvU4TlCCSbXaCC5fiDYygJ3DjAC4EwZXgUrcuPIagiMNFxAuIOIBDpCQLN5m6K10VqQcPQtLD/1HVdER8fHx8BiokGy16K44FwH2redtBGiIyLI6kVquNtJ213Y9BEOTFkZTL5enEEJKxOBKlVDkNZEEcCYDFxBAAq+JIlFJraVbkSBwJgOM0K3IpjoTkdRrIK4AJ24gwDCcBvKXZWg2l1LJtSBRFK53m7AgBcGYbQvI8NYTkc6FQmLKFCIIgT/LFBESvyqYtCMmtbmbsFvJQrVZHs0ZUKpUxAI/GIM1uZw0BsNftfL1AnuI4ZlYIkrF+PvsB0b0QkVwGjpx+GfcyW68Q3f1+KwAc9DpXEsg3gHq/ECTX9T2ygOh+ktwwjQBQJ/mRZKakEN0vvQUMPTNDAA6TrIQJyG8BXJGcS7EK853+2TILSBPzDuAkDMOZbgHFYnEWwKk+18QMYuIif7cbyRuSO1EULen3TqlUGtfVn/V3AHZJ3jWPNXZvMQyxVrE9gIfQQ+h0xfYAHkIPodMV2wN4CD2ETlf+DcTHx8dHBik/y7w4IKq4J3EAAAAASUVORK5CYII=" class="block size-15 mx-auto" />
+            <img src="./src/image/concret.png" class="block size-15 mx-auto" />
             <h2 class="font-semibold my-3">Transmission Lines</h2>
             <p class="text-[13px] text-justify">
               Execution of road construction projects and improvement of
@@ -329,7 +361,7 @@
           <div class="hover-3d items-center">
             <!-- content -->
             <figure class="max-w-100 rounded-2xl">
-              <img src="/Gransa-Pars/assets/petro-5pAwo2Gq.png" class="rounded-2xl" />
+              <img src="./src/image/petro.png" class="rounded-2xl" />
             </figure>
             <!-- 8 empty divs needed for the 3D effect -->
             <div></div>
@@ -343,7 +375,7 @@
           </div>
           <div class="w-1/2 p-2">
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFPElEQVR4nO1ZW4ydUxTeVbe4m3HOv79v/+ccptNpjFtlBpEQEiPiFjy4RlSFUFKRigfRSjxI8EBKXfrQuAUP4k5EKH0gcYtbi6YtkpKodFwmiipKvs76k9/vP/c5MyY5K1nJPnutf+299l7XfZzrQhe60IUupGBoaGgXoZvuQPJ2oZtu4L0/mOQ8AHcAeILkFqHGmhNNPO7/CKVSaZad/Fck/yS5huQzJP8GsFCosc2tMZ4vSd5WLBb7pnr/Loqig0g+SvIPAK+GEM4tFAp7iUZyOclVzrmdhBoDeEA08ZA8D8Br+pbkI977ylToMAPAdSR/Ifl0HMf9aWII4USZU/q07da2eO9PyPDOtpuS+S2U7EnRIIqiPbUwgI0kz8xh2ZnkapI3ZQkklwD42Dk3M0sDcBaAr0k+pTVcJ6Gvr29fAG8B+KBQKPg8HpLXAFjf39+/W5ZWqVR2B7CB5IK8b8vlMgB8SPJNrdUJHZw2BuB1YU9Pzz55PNooyU3ylWpy5Bskv81TVCDZAN4AsHJwcHBXN9EA4D4A62qdlPf+SpKfmYNXAzn+agCXV2Po7e3dW3JI3u0mEkIIp8kZoyg6tBYfgE+UJ+rJIzkfwEe1eOI4PswCwCluAk1qg6JULT7ZN8ntZhpn17q5SqWyn3ir+VkCJBfJCibExABcoQgl+6/FF0XRIQrHtoHvsmE2R+6v3vvBWjyV8eCgSHaZaxdIfirbr8cnuwawzfLF4ypJqvEqdwD4PUmeddZfIJ9y7QCAIS1YLUrlLKr8siyKoqKVK6tIXkVybkbu/coXTYT8bVkZTQHJxSo9muCfQ3JMN2hlyGKSL5O8PnPCYyQHGpULYCWAG1vRIVlUm1jUzDdWnmwG8EII4fQ4joOQ5BkAXhKtnv9kQQehb12rYOaRV4bUhGKxGFkZv96qXlXB61Qhy+xa2McIyS9cqyDb9N4fNdUdIsk5ALa29LFit51mKY9uDj2SYAghTi08kKY1Ep1qQalUovbSaj6ZoV6hWuOj4pDkz7pyAD8BuCWhWWe42WhbAZzcpiKztJeWS3xzzOEqtLtI3mPjJSQfS9HeI3m+jV+pVu02Ct77Ye2lZQEk3wVwUR4NwIsArjW+C8Sbov2oHGTjZQDubFORiwG83VbFq5OvQlurYtIWGtbmbVyQPSdJVDUagOdb3oQbv33tpR0BOunPc0gzlfFVaqSKQIXYA0geq1orYVQuScsAsIeSrBWX9wI4vt4+AKxVH9NuW6vnnCOTOdv0XL2EKHKVy+X9hQBG5dTK6gDeSebjOD5aDk+y1/jKUloObN3gvITX5bTAttaWtttfAA8BeDD1+7ckyXUAB3LWfxjACtcuSLhONDEjKRJCOCY5xYlCKwwH0mvbrW1tpi6rp8xSNUuJIvaauJTk+/UQwIUyQaukq6K9jZ1j4x2mrCSr6tl1AhJFABynR4YGcLZFrm0AfqiHJMfUdHVk83mKqO/Wk2c9lML2mPdsI/L9+CFNniL2nru8ATwpUSSEcLhO3OSMWv55kuQNJK9WqT7pilhYHKmHCreJIir6oig6UHL01quHDZX8CunKK4VCwU/FjaxQUdgAzk8UUQEK4DnJUatrVfLN8iX1PSRvnXRFmvxmhyJxHPeQvFRzIYRLVM4oiYYQjtCLivf+1ClTRPYtOzd7H7W5MflDVpGsLGV1NU3pOd8pRezK06ay3V7id/wG8L29CH5jf+Bo/i97j0p4Ru0viH+ZnSW7TZm5jVojw9t0u/0fkAM24tSdxEKdF8kudKELXXDTDv4BkBACYi9prmoAAAAASUVORK5CYII="
+              src="./src/image/Petrochemical.png"
               class="block mx-auto size-15"
             />
             <h2 class="font-semibold my-3">Oil and Gas Projects</h2>
@@ -418,16 +450,16 @@
         <div class="swiper mySwiper rounded-4xl">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/Gransa-Pars/assets/g1-Dug68NFA.png" />
+              <img src="./src/image/news/g1.png" />
             </div>
             <div class="swiper-slide">
-              <img src="/Gransa-Pars/assets/g1-Dug68NFA.png" />
+              <img src="./src/image/news/g1.png" />
             </div>
             <div class="swiper-slide">
-              <img src="/Gransa-Pars/assets/g1-Dug68NFA.png" />
+              <img src="./src/image/news/g1.png" />
             </div>
             <div class="swiper-slide">
-              <img src="/Gransa-Pars/assets/g1-Dug68NFA.png" />
+              <img src="./src/image/news/g1.png" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -473,49 +505,49 @@
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/1-AlIVaOzl.png" />
+              <img src="./src/image/karfarma/1.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/2-Bze20Meo.png" />
+              <img src="./src/image/karfarma/2.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/4-DyncvezR.png" />
+              <img src="./src/image/karfarma/4.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/5-Dwvbtdyv.png" />
+              <img src="./src/image/karfarma/5.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/6-Ct27Rkgf.png" />
+              <img src="./src/image/karfarma/6.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/1-AlIVaOzl.png" />
+              <img src="./src/image/karfarma/1.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/2-Bze20Meo.png" />
+              <img src="./src/image/karfarma/2.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/4-DyncvezR.png" />
+              <img src="./src/image/karfarma/4.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/5-Dwvbtdyv.png" />
+              <img src="./src/image/karfarma/5.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/6-Ct27Rkgf.png" />
+              <img src="./src/image/karfarma/6.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/1-AlIVaOzl.png" />
+              <img src="./src/image/karfarma/1.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/2-Bze20Meo.png" />
+              <img src="./src/image/karfarma/2.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/4-DyncvezR.png" />
+              <img src="./src/image/karfarma/4.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/5-Dwvbtdyv.png" />
+              <img src="./src/image/karfarma/5.png" />
             </div>
             <div class="swiper-slide swiper-slide2">
-              <img src="/Gransa-Pars/assets/6-Ct27Rkgf.png" />
+              <img src="./src/image/karfarma/6.png" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -528,7 +560,7 @@
 
     <div class="flex flex-row justify-center items-center gap-10 my-10">
       <div class="bg-base-100">
-        <img src="/Gransa-Pars/assets/logo-C5M1yBqz.png" class="w-60" />
+        <img src="./src/image/logo.png" class="w-60" />
       </div>
       <div class="w-60 flex flex-col gap-2">
         <h2 class="text-xl">Contact Info</h2>
