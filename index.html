@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gransa-Pars</title>
-    
+    <link rel="stylesheet" href="./src/css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -37,81 +37,315 @@
     }
 
     .mySwiper2 .swiper-wrapper .swiper-slide img {
-      width: 90px !important;
-      height: 90px !important;
-      object-fit: contain !important;
+      width: 70px !important;
+      height: 70px !important;
+      object-fit: cover !important;
       flex-shrink: 0;
     }
+    @media (max-width: 640px) {
+  .mySwiper2 .swiper-wrapper .swiper-slide img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
   </style>
 
- <body>
-    <div class="w-full mx-auto">
+  <body class="">
+    <!-- Construction Road -->
+   <div class="custom-road-scrollbar">
+  <svg
+    class="road-svg"
+    viewBox="0 0 100 1000"
+    preserveAspectRatio="none"
+  >
+    <!-- Road -->
+    <path
+      d="M 50 0 L 50 1000"
+      stroke="#494e53"
+      stroke-width="30"
+      fill="none"
+    />
+
+    <!-- Moving Road Lines -->
+    <path
+      class="road-moving-lines"
+      d="M 50 0 L 50 1000"
+      stroke="#c9a239"
+      stroke-width="2"
+      stroke-dasharray="12 12"
+      fill="none"
+      id="roadPath"
+    />
+  </svg>
+
+  <!-- Loader -->
+  <img
+    src="./src/image/target.png"
+    alt="Komatsu Loader"
+    class="road-loader"
+  />
+ <div
+  id="roadYear"
+  class="fixed right-6 top-10 text-[#bc9632] text-sm font-bold px-3 py-1 rounded-md z-99999"
+>
+  1988
+</div>
+</div>
+
+    <main class="w-full ">
       <!-- mainPage -->
 
       <!-- header -->
 
       <!-- menu -->
+
+      <!-- Mobile Menu Toggle -->
+      <input type="checkbox" id="mobileMenuToggle" class="hidden" />
+
+      <!-- Navbar -->
       <div
-        class="navbar bg-base-100 w-[90%] mx-auto sticky top-0 z-50 rounded-2xl shadow-amber-600 shadow-lg"
+        class="navbar mx-auto sticky top-0 z-20 shadow-[#bc9632]/30 shadow-md px-4 lg:px-70 bg-[#0d2427] hover:bg-base-100 text-[#be9634] hover:text-zinc-900 transition-all transition-900 group relative h-20"
       >
-        <div class="navbar-start">
-          <a class="">
-            <img class="w-20 h-16.25 p-2" src="./src/image/logo.png" />
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20">
+          <label
+            for="mobileMenuToggle"
+            class="cursor-pointer p-2 block"
+            aria-label="Open mobile menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-7 h-7"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </label>
+        </div>
+
+        <!-- Logo -->
+        <div
+          class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:navbar-start"
+        >
+          <a class="group-hover:scale-110 transition duration-600">
+            <img
+              class="w-16 h-14 lg:w-20 lg:h-16.25 p-2"
+              src="./src/image/v1.png"
+              alt="Logo"
+            />
           </a>
         </div>
-        <div class="navbar-center hidden lg:flex font-semibold">
+
+        <!-- Desktop Menu -->
+        <div
+          class="navbar-center hidden lg:flex font-semibold absolute left-1/2 -translate-x-1/2"
+        >
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
+            <li><a href="/">Home</a></li>
             <li>
               <details>
-                <summary>Projects</summary>
-                <ul class="p-2 bg-base-100 w-40 z-1">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
+                <summary>AboutUs</summary>
+                <ul class="p-2 bg-base-100 w-fit z-50">
+                  <li><a>AboutUs</a></li>
+                  <li><a>Chart Company</a></li>
+                  <li><a>Catalog</a></li>
+                  <li><a>HSSE</a></li>
+                  <li><a>QMS</a></li>
+                  <li><a>Certificates</a></li>
+                  <li><a>Equipment & Machinery</a></li>
+                  <li><a>Ranking Documents</a></li>
+                  <li><a>Capabilities</a></li>
                 </ul>
               </details>
             </li>
             <li>
               <details>
                 <summary>Services</summary>
-                <ul class="p-2 bg-base-100 w-40 z-1">
+                <ul class="p-2 bg-base-100 w-40 z-50">
                   <li><a>Submenu 1</a></li>
                   <li><a>Submenu 2</a></li>
                 </ul>
               </details>
             </li>
 
-            <li><a>Teams</a></li>
-            <li><a>AboutUs</a></li>
+            <li>
+              <details>
+                <summary>Projects</summary>
+                <ul class="p-2 bg-base-100 w-40 z-50">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+
+            <li><a>News</a></li>
             <li><a>ContactUs</a></li>
           </ul>
         </div>
-        <div class="navbar-end flex gap-1.5">
-          <a
-            href="/"
-            class="w-fit bg-[#007f90] text-[#be9634] font-bold p-2 rounded-full shadow-md text-[12px]"
-            >EN</a
-          >
-          <a
-            href="./gransa-fa"
-            class="w-fit text-[#007f90] shadow-[#be9634] font-bold p-2 rounded-full shadow-md border text-[12px] hover:bg-[#007f90] hover:text-[#be9634]"
-            >FA</a
-          >
+
+        <!-- Language Switcher -->
+        <div
+          class="navbar-end w-auto ml-0 gap-1.5 md:ml-auto md:flex-1 absolute left-4 top-1/2 -translate-y-1/2 md:static md:translate-y-0"
+        >
+          <!--Subsidiary Companies-->
+          <div class="relative subsidiary-menu md:block hidden">
+            <div
+              id="subsidiaryBtn"
+              class="border border-[#be9634] px-3 py-1 rounded-4xl cursor-pointer"
+            >
+              <p>Subsidiary Companies</p>
+            </div>
+
+            <div
+              id="subsidiaryDropdown"
+              class="absolute top-20 w-screen bg-white border-t border-[#be9634] shadow-xl p-6 z-9999 h-60 opacity-0 invisible -translate-y-3 transition-all duration-300 ease-in-out"
+            >
+              <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6 items-center justify-center">
+                <div>
+                  <img class="h-40" src="./src/image/logosub.png" />
+                </div>
+                <div>
+                  <img class="h-40" src="./src/image/logosub.png" />
+                </div>
+                <div>
+                  <img class="h-40" src="./src/image/logosub.png" />
+                </div>
+                <div>
+                  <img class="h-40" src="./src/image/logosub.png" />
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown dropdown-center">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle text-[#be9634] hover:bg-white/10"
+            >
+              <!-- Globe Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="27"
+                height="27"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+
+            <ul
+              tabindex="0"
+              class="dropdown-content menu bg-[#0d2427] rounded-box z-100 w-15 p-2 shadow-lg border border-[#be9634]/40 mt-3"
+            >
+              <li>
+                <a
+                  href="/FA"
+                  class="text-[#be9634] hover:bg-[#be9634] hover:text-[#0d2427] justify-center font-semibold"
+                >
+                  FA
+                </a>
+                <a
+                  href="/AR"
+                  class="text-[#be9634] hover:bg-[#be9634] hover:text-[#0d2427] justify-center font-semibold"
+                >
+                  AR
+                </a>
+                <a
+                  href="/RU"
+                  class="text-[#be9634] hover:bg-[#be9634] hover:text-[#0d2427] justify-center font-semibold"
+                >
+                  RU
+                </a>
+                <a
+                  href="/TG"
+                  class="text-[#be9634] hover:bg-[#be9634] hover:text-[#0d2427] justify-center font-semibold"
+                >
+                  TG
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- hero -->
+      <!-- Mobile Full Screen Menu (Outside Navbar) -->
       <div
-        class="hero h-[700px] relative"
-        style="
-          background-image: url(&quot;./src/image/hero2.jpg&quot;);
-          background-size: cover;
-          background-position: center;
-        "
+        id="mobileMenu"
+        class="hidden fixed inset-0 w-screen h-dvh bg-black/80 backdrop-blur-sm text-white flex-col items-center justify-center gap-8 z-9999"
       >
+        <!-- Close Button -->
+        <label
+          for="mobileMenuToggle"
+          class="absolute top-6 right-6 cursor-pointer text-white text-4xl hover:text-[#be9634]"
+          aria-label="Close menu"
+        >
+          &times;
+        </label>
+
+        <a class="text-xl font-semibold hover:text-[#be9634]">Home</a>
+        <a class="text-xl font-semibold hover:text-[#be9634]">About Us</a>
+
+        <details class="text-center">
+          <summary class="text-xl font-semibold cursor-pointer">
+            Services
+          </summary>
+          <div class="flex flex-col gap-4 mt-5 text-gray-300">
+            <a>Submenu 1</a>
+            <a>Submenu 2</a>
+          </div>
+        </details>
+
+        <details class="text-center">
+          <summary class="text-xl font-semibold cursor-pointer">
+            Projects
+          </summary>
+          <div class="flex flex-col gap-4 mt-5 text-gray-300">
+            <a>Submenu 1</a>
+            <a>Submenu 2</a>
+          </div>
+        </details>
+
+        <a class="text-xl font-semibold hover:text-[#be9634]">News</a>
+        <a class="text-xl font-semibold hover:text-[#be9634]">Contact Us</a>
+      </div>
+
+      <!-- hero -->
+
+      <div class="w-full relative sticky top-20 z-0 h-250">
+        <!-- slider hero -->
+        <div>
+          <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="./src/video/v-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+
         <!-- Gradient Overlay -->
         <div
-          class="absolute inset-0"
+          class="absolute inset-0 z-10 h-full"
           style="
             background: linear-gradient(
               to right,
@@ -125,12 +359,23 @@
 
         <!-- Hero Content -->
         <div
-          class="hero-content relative z-10 text-neutral-content text-left w-full justify-start px-10 md:px-20"
+          class="absolute inset-0 z-20 text-neutral-content text-left w-full justify-start px-10 md:px-20 mt-50"
         >
           <div class="max-w-xl">
-            <h1 class="mb-3 text-6xl font-bold">Gransa Pars</h1>
+  <h1
+    class="text-6xl font-bold opacity-0 translate-y-10
+     animate-[revealText_1s_ease-out_0.5s_forwards]"
+  >
+    Gransa Pars
+  </h1>
 
-            <h1 class="mb-5 text-5xl font-bold text-[#C9A239]">Company</h1>
+  <h1
+    class="mb-15 text-5xl font-bold text-[#C9A239]
+    opacity-0 translate-y-10
+    animate-[revealText_1.2s_ease-out_1s_forwards]"
+  >
+    Company
+  </h1>
 
             <p class="mb-7 text-xl leading-relaxed">
               Building the Infrastructure for a Better Tomorrow Through
@@ -140,515 +385,783 @@
 
             <div class="flex gap-3">
               <button
-                class="w-fit p-2 bg-[#007f90] rounded-2xl border border-[#C9A239] hover:bg-[#c9a239] text-white font-semibold text-[14px]"
+                class="w-fit px-4 py-3 bg-[#007f90] rounded-3xl border border-[#382b07] hover:bg-[#c9a239] text-white font-semibold text-[14px]"
               >
-                View Projects
-              </button>
-
-              <button
-                class="w-fit p-2 bg-[#007f90] rounded-2xl border border-[#C9A239] hover:bg-[#c9a239] text-white font-semibold text-[14px]"
-              >
-                About Us
+                View Our Projects
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- aboutus -->
-      <div class="text-center mt-10 text-2xl divider">About Our Company</div>
 
-      <div class="mt-2 w-[90%] mx-auto p-4">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          aspernatur doloribus eos, non totam quos, minus, consectetur ut
-          architecto nemo dignissimos impedit recusandae aut ipsum eaque
-          excepturi et praesentium commodi? Facere illo magni maiores eum et?
-          Placeat consequatur quod qui laboriosam aperiam a ipsum, accusamus
-          nulla possimus ex numquam molestias sed. Tempora doloremque, soluta
-          numquam dignissimos in est laboriosam? Consequatur non, sequi eaque
-          sit necessitatibus fugiat exercitationem distinctio perspiciatis
-          itaque voluptatum, qui officia explicabo in magni dolores, expedita
-          voluptate aliquam ad nobis vero. Mollitia amet in et natus fuga rerum
-          consequuntur maiores deserunt iure odit, temporibus possimus nulla
-          praesentium voluptates. Illum hic quaerat totam modi magni repudiandae
-          incidunt ab, fugiat culpa? Velit, modi error ullam commodi nesciunt
-          dolor veniam rerum fugit ipsam sint nisi dolores harum sunt iste
-          incidunt magnam eos. Nihil illo iusto explicabo laboriosam, qui odio
-          ipsa repellendus debitis nemo nobis quos eveniet cumque perspiciatis
-          dolor corporis ullam tempora suscipit veniam voluptate harum similique
-          assumenda dignissimos. Aperiam delectus et similique pariatur? Cum
-          earum nobis vitae sapiente non consequatur amet sint alias quasi.
-          Totam, fuga cum! Qui corporis harum beatae blanditiis itaque. Fugit a
-          consectetur quas itaque similique, ea, iure doloremque voluptatem
-          veniam quidem autem, laborum in vel ipsa.
-        </p>
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolores
-          ipsam, deserunt voluptates dolorum ea nemo officiis perferendis. Quis
-          mollitia perspiciatis fugit rem nihil? Atque repudiandae incidunt
-          placeat, odio consequuntur delectus asperiores blanditiis omnis
-          quibusdam modi nihil sint quod quasi amet illo dolorum. Incidunt
-          libero accusantium placeat illo molestiae magni nemo aliquid debitis
-          illum perspiciatis eos officia reprehenderit deserunt dolorem
-          temporibus a, ut perferendis obcaecati soluta rerum! Maiores ullam
-          illo animi vitae expedita atque aliquid, commodi et eum, iure odit ab
-          accusantium ratione officia at. Expedita architecto repudiandae quis
-          recusandae quaerat veniam debitis ratione, nihil quas. Nulla quam vel,
-          natus esse aliquid animi laboriosam magnam quod rerum expedita harum
-          qui? Sapiente minima accusamus porro illum perferendis vitae natus!
-          Sit ipsum minima maiores ad nihil vitae distinctio placeat fugiat ex
-          accusantium dolor ducimus voluptatibus non recusandae voluptates,
-          deleniti provident obcaecati autem. Nam illo possimus sapiente
-          doloremque iure quaerat, commodi ipsa repudiandae quia voluptatum, ea
-          ad numquam ducimus beatae ipsum labore totam aliquam doloribus cum
-          aperiam dicta laborum recusandae soluta alias. Non facere hic maiores
-          animi enim facilis voluptates, velit nostrum cum assumenda quo porro
-          numquam eveniet sit quia impedit ipsum, unde reprehenderit iste!
-          Aspernatur totam amet sint, laborum quam quibusdam distinctio!
-        </p>
-      </div>
+      <div class="relative z-10 bg-white">
+<!-- main box -->
 
-      <!-- session1 -->
-      <div class="w-[90%] mx-auto mt-10 devider">
-        <div class="divider text-2xl">Services</div>
-      </div>
-      <div class="w-[90%] mx-auto flex gap-3 mt-10 md:flex-row flex-col">
+        <!-- aboutus -->
 
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/rah.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="md:w-1/2 p-3">
-            <img src="./src/image/road.png" class="block size-15 mx-auto" />
-            <h2 class="font-semibold my-3">Road Constuction</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards and
-              using modern equipment.
-            </p>
-          </div>
+        <div
+          class="md:w-[75%] w-full mx-auto text-center md:mt-10 mt-5 text-xl md:pt-15 pt-10 pb-5 font-semibold divider z-10 bg-white relative"
+        >
+          About Our Company
         </div>
-        <div class="divider lg:divider-horizontal"></div>
 
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/pol.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="md:w-1/2 p-2">
-            <img src="./src/image/bridge.png" class="block size-15 mx-auto" />
-            <h2 class="font-semibold my-3">Constuction Projects</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards.
+        <div
+          class="mt-10 mb-10 md:w-[75%] w-[95%] h-80 mx-auto  z-10 bg-white relative flex md:flex-row flex-col justify-center gap-10"
+        >
+          <div class="md:w-1/2 w-full flex-1 flex flex-col">
+            <p class="text-justify md:line-clamp-8 line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              aspernatur doloribus eos, non totam quos, minus, consectetur ut
+              architecto nemo dignissimos impedit recusandae aut ipsum eaque
+              excepturi et praesentium commodi? Facere illo magni maiores eum
+              et? Placeat consequatur quod qui laboriosam aperiam a ipsum,
+              accusamus aspernatur doloribus eos, non totam quos, minus,
+              consectetur ut architecto nemo dignissimos impedit recusandae aut
+              ipsum eaque excepturi et praesentium commodi? Facere illo magni
+              maiores eum et? Placeat consequatur quod qui laboriosam aperiam a
+              ipsum, accusamus ...
             </p>
+            <a
+              class="mt-5 text-[#0d2427] font-semibold underline underline-offset-4"
+              >Read-more</a
+            >
           </div>
-        </div>
-        <div class="divider lg:divider-horizontal"></div>
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/sad.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="md:w-1/2 p-2">
+          <div class="md:w-1/2 w-[90%] mx-auto flex-1 ">
             <img
-              src="./src/image/icons8-dam-50.png"
-              class="block mx-auto size-15"
+              class="w-full h-full object-cover"
+              src="./src/image/about-banner.png"
             />
-            <h2 class="font-semibold my-3">Dam Constuction</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--2 row  -->
-      <div class="divider w-[90%] mx-auto"></div>
-      <div class="w-[90%] mx-auto flex gap-3 mt-10 md:flex-row flex-col">
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/tonel.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-
-          <div class="md:w-1/2 p-3">
-            <img
-              src="./src/image/icons8-tunnel-48.png"
-              class="block size-15 mx-auto"
-            />
-            <h2 class="font-semibold my-3">Tunneling</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards and
-              using modern equipment.
-            </p>
           </div>
         </div>
 
-        <div class="divider lg:divider-horizontal"></div>
-
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/channelconcrete.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <!-- services -->
+          <div class="md:w-[75%] w-full mx-auto mt-20 mb-10 devider z-10 bg-base-100 ">
+            <div class="divider text-xl font-semibold">Services</div>
           </div>
-          <div class="md:w-1/2 p-2">
-            <img src="./src/image/concret.png" class="block size-15 mx-auto" />
-            <h2 class="font-semibold my-3">Transmission Lines</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards.
-            </p>
+         <div>
+          <div class="md:w-[75%] w-[95%] mx-auto md:h-120 h-auto  z-10  flex flex-col gap-2">
+            <!-- row1 -->
+            <div class="w-full h-1/2 flex md:flex-row flex-col gap-1 border-b pb-2 border-b-gray-100">
+              <!-- 1 -->
+
+              <div class="md:w-1/3 w-full  flex md:flex-row flex-col rounded-tl-2xl overflow-hidden">
+                <!-- image -->
+                <div class="md:w-2/3 w-[90%] mx-auto  h-full rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl">
+                  <img  class="w-full h-full object-cover" src="./src/image/rah.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] mx-auto h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img src="./src/image/road.png" alt="">
+                  </div>
+                  <!-- titr -->
+                  <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer">
+                    <p>Road Projects</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+              <!-- 2 -->
+              <div class="md:w-1/3 w-full flex md:flex-row flex-col border-l border-r px-1 border-gray-100 ">
+                <!-- image -->
+                <div class="md:w-2/3 h-full w-[90%] mx-auto rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl">
+                  <img  class="w-full h-full object-cover" src="./src/image/pol.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img src="./src/image/bridge.png" alt="">
+                  </div>
+                  <!-- titr -->
+                  <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer text-center">
+                    <p>Construction
+                      <br/> Projects</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+              <!-- 3 -->
+              <div class="md:w-1/3 w-full flex md:flex-row flex-col ">
+                <!-- image -->
+                <div class="md:w-2/3 w-[90%] mx-auto h-full rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl">
+                  <img  class="w-full h-full object-cover" src="./src/image/tonel.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img src="./src/image/icons8-tunnel-48.png" alt="">
+                  </div>
+                  <!-- titr -->
+                  <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer text-center">
+                    <p>Tunneling <br/>
+                    projects</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- row2 -->
+
+            <div class="w-full  h-1/2 flex md:flex-row flex-col gap-1">
+              <!-- 1 -->
+            <div class="md:w-1/3 w-full flex md:flex-row flex-col ">
+                <!-- image -->
+                <div class="md:w-2/3 h-full w-[90%] mx-auto rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl">
+                  <img  class="w-full h-full object-cover" src="./src/image/sad.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img src="./src/image/dam.png" alt="">
+                  </div>
+                  <!-- titr -->
+                   <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer text-center">
+                    <p>Dam Projects</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+              <!-- 2 -->
+              <div class="md:w-1/3 w-full flex md:flex-row flex-col border-l border-r px-1 border-gray-100">
+                <!-- image -->
+                <div class="md:w-2/3 w-[90%] mx-auto h-full rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl">
+                  <img  class="w-full h-full object-cover" src="./src/image/channelconcrete.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img src="./src/image/concret.png" alt="">
+                  </div>
+                  <!-- titr -->
+                   <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer text-center">
+                    <p>Transmision <br/> Lines</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+              <!-- 3 -->
+              <div class="md:w-1/3 w-full flex md:flex-row flex-col">
+                <!-- image -->
+                <div class="md:w-2/3 w-[90%] mx-auto h-full rounded-xl overflow-hidden transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl
+                
+                
+                ">
+                  <img  class="w-full h-full object-cover" src="./src/image/petro.png" alt="">
+                </div>
+                <!-- icone-titr -->
+                <div class="md:w-1/3 w-[90%] h-full flex flex-col">
+                  <!-- icon -->
+                  <div class="w-full h-1/2  flex justify-center items-center">
+                    <img class="" src="./src/image/Petrochemical.png" alt="">
+                  </div>
+                  <!-- titr -->
+                   <div class="w-full h-1/2  flex justify-center items-center font-semibold cursor-pointer text-center">
+                    <p>Oil & Gas <br/> Projects </p>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+            
+
           </div>
-        </div>
-        <div class="divider lg:divider-horizontal"></div>
-        <div class="md:w-1/3 w-[80%] mx-auto flex p-2 md:flex-row flex-col">
-          <div class="hover-3d items-center">
-            <!-- content -->
-            <figure class="max-w-100 rounded-2xl">
-              <img src="./src/image/petro.png" class="rounded-2xl" />
-            </figure>
-            <!-- 8 empty divs needed for the 3D effect -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="md:w-1/2 p-2">
-            <img
-              src="./src/image/Petrochemical.png"
-              class="block mx-auto size-15"
-            />
-            <h2 class="font-semibold my-3">Oil and Gas Projects</h2>
-            <p class="text-[13px] text-justify">
-              Execution of road construction projects and improvement of
-              transportation routes in compliance with the latest standards.
-            </p>
-          </div>
-        </div>
-      </div>
+         </div>
+     
+<!-- our project -->
 
-      <!-- our teams -->
+   <div class="mt-20">
+    <div class="m:w-[75%] w-full h-15 mx-auto devider z-10 bg-base-100">
+        <div class="divider text-xl font-semibold">Projects</div>
+   </div>
 
-      <div class="text-center mt-10 text-2xl divider">Our Teams</div>
+<div class="md:w-[75%] w-full md:h-170 h-auto flex md:flex-row flex-col justify-center items-center mx-auto gap-3">
+   
+   <div class="md:w-1/4 w-[90%] md:h-full h-auto  flex flex-col gap-3">
+    
+    <div
+                class="w-full md:h-full h-auto justify-center items-center relative group overflow-hidden"
+              >
+                <!-- لایه هاور -->
+                <div
+                  class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <h3 class="text-white text-2xl font-bold">
+                    Road consruction
+                  </h3>
 
-      <div class="mt-2 w-[90%] mx-auto p-4">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          aspernatur doloribus eos, non totam quos, minus, consectetur ut
-          architecto nemo dignissimos impedit recusandae aut ipsum eaque
-          excepturi et praesentium commodi? Facere illo magni maiores eum et?
-          Placeat consequatur quod qui laboriosam aperiam a ipsum, accusamus
-          nulla possimus ex numquam molestias sed. Tempora doloremque, soluta
-          numquam dignissimos in est laboriosam? Consequatur non, sequi eaque
-          sit necessitatibus fugiat exercitationem distinctio perspiciatis
-          itaque voluptatum, qui officia explicabo in magni dolores, expedita
-          voluptate aliquam ad nobis vero. Mollitia amet in et natus fuga rerum
-          consequuntur maiores deserunt iure odit, temporibus possimus nulla
-          praesentium voluptates. Illum hic quaerat totam modi magni repudiandae
-          incidunt ab, fugiat culpa? Velit, modi error ullam commodi nesciunt
-          dolor veniam rerum fugit ipsam sint nisi dolores harum sunt iste
-          incidunt magnam eos. Nihil illo iusto explicabo laboriosam, qui odio
-          ipsa repellendus debitis nemo nobis quos eveniet cumque perspiciatis
-          dolor corporis ullam tempora suscipit veniam voluptate harum similique
-          assumenda dignissimos. Aperiam delectus et similique pariatur? Cum
-          earum nobis vitae sapiente non consequatur amet sint alias quasi.
-          Totam, fuga cum! Qui corporis harum beatae blanditiis itaque. Fugit a
-          consectetur quas itaque similique, ea, iure doloremque voluptatem
-          veniam quidem autem, laborum in vel ipsa.
-        </p>
-             <p class="text-justify">
+                  <p class="text-white/80 text-sm mt-3">
+                    Execution of road subgrade preparation and asphalt paving
+                    using advanced equipment and modern engineering standards.
+                  </p>
 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolores
-          ipsam, deserunt voluptates dolorum ea nemo officiis perferendis. Quis
-          mollitia perspiciatis fugit rem nihil? Atque repudiandae incidunt
-          placeat, odio consequuntur delectus asperiores blanditiis omnis
-          quibusdam modi nihil sint quod quasi amet illo dolorum. Incidunt
-          libero accusantium placeat illo molestiae magni nemo aliquid debitis
-          illum perspiciatis eos officia reprehenderit deserunt dolorem
-          temporibus a, ut perferendis obcaecati soluta rerum! Maiores ullam
-          illo animi vitae expedita atque aliquid, commodi et eum, iure odit ab
-          accusantium ratione officia at. Expedita architecto repudiandae quis
-          recusandae quaerat veniam debitis ratione, nihil quas. Nulla quam vel,
-          natus esse aliquid animi laboriosam magnam quod rerum expedita harum
-          qui? Sapiente minima accusamus porro illum perferendis vitae natus!
-          Sit ipsum minima maiores ad nihil vitae distinctio placeat fugiat ex
-          accusantium dolor ducimus voluptatibus non recusandae voluptates,
-          deleniti provident obcaecati autem. Nam illo possimus sapiente
-          doloremque iure quaerat, commodi ipsa repudiandae quia voluptatum, ea
-          ad numquam ducimus beatae ipsum labore totam aliquam doloribus cum
-          aperiam dicta laborum recusandae soluta alias. Non facere hic maiores
-          animi enim facilis voluptates, velit nostrum cum assumenda quo porro
-          numquam eveniet sit quia impedit ipsum, unde reprehenderit iste!
-          Aspernatur totam amet sint, laborum quam quibusdam distinctio!
-        </p>
-      </div>
-      <!-- news -->
-       <div class="text-center mt-10 md:text-2xl text-lg divider w-[90%] mx-auto">
-          Latest News & Industry Insights
-        </div>
+                  <a
+                    href="#"
+                    class="text-white mt-4 font-semibold bg-zinc-800 border border-[#ecdfb9] shadow shadow-[#d4a62c] w-fit px-3 py-2 rounded-2xl"
+                  >
+                    view project
+                  </a>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/image/hero2.jpg"
+                />
+              </div>
+   <div
+                class="w-full md:h-full h-auto justify-center items-center relative group overflow-hidden"
+              >
+                <!-- لایه هاور -->
+                <div
+                  class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <h3 class="text-white text-2xl font-bold">
+                    Road consruction
+                  </h3>
 
-      <div class="mt-10 md:w-[90%] w-full  md:mx-auto md:p-4 flex flex-col gap-5">
+                  <p class="text-white/80 text-sm mt-3">
+                    Execution of road subgrade preparation and asphalt paving
+                    using advanced equipment and modern engineering standards.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="text-white mt-4 font-semibold bg-zinc-800 border border-[#ecdfb9] shadow shadow-[#d4a62c] w-fit px-3 py-2 rounded-2xl"
+                  >
+                    view project
+                  </a>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/image/hero-2.png"
+                />
+              </div>
+
+
+   </div>
+   <div class="md:w-2/4 w-full md:h-full h-auto bg-amber-500">
+
+     <video
+            class="w-full md:h-full h-auto object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="./src/video/v-3.mp4" type="video/mp4" />
+          </video>
+
+   </div>
+  <div class="md:w-1/4 w-[90%] md:h-full h-auto  flex flex-col gap-3">
+    <div
+                class="w-full h-full justify-center items-center relative group overflow-hidden"
+              >
+                <!-- لایه هاور -->
+                <div
+                  class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <h3 class="text-white text-2xl font-bold">
+                    Road consruction
+                  </h3>
+
+                  <p class="text-white/80 text-sm mt-3">
+                    Execution of road subgrade preparation and asphalt paving
+                    using advanced equipment and modern engineering standards.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="text-white mt-4 font-semibold bg-zinc-800 border border-[#ecdfb9] shadow shadow-[#d4a62c] w-fit px-3 py-2 rounded-2xl"
+                  >
+                    view project
+                  </a>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/image/hero-1.png"
+                />
+              </div><div
+                class="w-full md:h-full h-auto justify-center items-center relative group overflow-hidden"
+              >
+                <!-- لایه هاور -->
+                <div
+                  class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <h3 class="text-white text-2xl font-bold">
+                    Road consruction
+                  </h3>
+
+                  <p class="text-white/80 text-sm mt-3">
+                    Execution of road subgrade preparation and asphalt paving
+                    using advanced equipment and modern engineering standards.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="text-white mt-4 font-semibold bg-zinc-800 border border-[#ecdfb9] shadow shadow-[#d4a62c] w-fit px-3 py-2 rounded-2xl"
+                  >
+                    view project
+                  </a>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./src/image/hero.png"
+                />
+              </div>
+
+   </div>
+
+</div>
+   </div>
         
 
-        <!-- Swiper -->
-        <div class="swiper mySwiper md:rounded-4xl ">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./src/image/news/g1.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/image/news/g1.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/image/news/g1.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./src/image/news/g1.png" />
+        <!-- our teams -->
+
+        <div>
+          <div class="md:w-[75%] w-full mx-auto text-center md:mt-10 mt-10 divider text-xl font-semibold">
+          Our Teams
+        </div>
+
+        <div
+          class="md:mt-10 mt-10 md:mb-10 md:w-[75%] w-[90%] md:h-80 h-auto  mx-auto z-10  relative flex md:flex-row flex-col md:justify-center md:items-center gap-10"
+        >
+          <div class="md:w-1/2 w-full md:h-full h-auto flex-1">
+            <img
+              class="w-full h-full object-cover"
+              src="./src/image/teams-banner.png"
+            />
+          </div>
+          <div class="md:w-1/2 w-full flex-1 flex flex-col">
+            <p class="text-justify line-clamp-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              aspernatur doloribus eos, non totam quos, minus, consectetur ut
+              architecto nemo dignissimos impedit recusandae aut ipsum eaque
+              excepturi et praesentium commodi? Facere illo magni maiores eum
+              et? Placeat consequatur quod qui laboriosam aperiam a ipsum,
+              accusamus aspernatur doloribus eos, non totam quos, minus,
+              consectetur ut architecto nemo dignissimos impedit recusandae aut
+              ipsum eaque excepturi et praesentium commodi? Facere illo magni
+              maiores eum et? Placeat consequatur quod qui laboriosam aperiam a
+              ipsum, accusamus ...
+            </p>
+            <a
+              class="mt-5 text-[#0d2427] font-semibold underline underline-offset-4"
+              >Read-more</a
+            >
+          </div>
+        </div>
+        </div>
+
+        <!-- news -->
+            <div class="md:hidden flex w-full mx-auto text-center  mt-10 divider text-xl font-semibold">
+          News
+        </div>
+        <div
+          class="md:w-[75%] w-full md:h-100 h-auto mx-auto flex md:flex-row flex-col p-5 gap-4 justify-center items-center md:my-30 my-10"
+        >
+          <div
+            class="md:flex hidden md:w-1/3 w-full h-full flex-1 justify-start items-center md:text-4xl text-2xl font-bold"
+          >
+            <p>latest News<br />& <br />Industry Insight</p>
+          </div>
+
+          <div class="md:w-2/3 w-full h-full flex-1">
+            <div class="swiper mySwiper md:rounded-4xl">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./src/image/news/b2.png" />
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="./src/image/news/b2.png" />
+                </div>
+              </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
         </div>
+
+        <!-- map  -->
+        <div class="md:w-[40%] w-[80%] mx-auto md:mt-20 mt-10 flex justify-center">
+          <img
+            src="./src/image/map-v1.png"
+            class="w-full h-auto object-contain"
+            alt="Gransa Pars Regional Map"
+          />
+        </div>
+
+   
+
+<section class="relative bg-[#0d2427] py-5 px-5 overflow-hidden mt-10">
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-24">
+
+      <!-- Today -->
+      <div class="text-center group">
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <i class="fa-regular fa-eye text-[#C9A239] text-lg"></i>
+          <span class="text-gray-400 text-xs tracking-[2px] uppercase">
+            Today's Visitors
+          </span>
+        </div>
+
+        <h3 class="text-3xl font-light tracking-[3px] text-[#e6c66e]">
+          1,248
+        </h3>
+
+        <div class="w-8 h-[1px] bg-[#C9A239]/60 mx-auto mt-4
+                    transition-all duration-500 group-hover:w-16"></div>
       </div>
 
-      <!-- sesseion -->
-      <div class="divider my-10 w-[90%] mx-auto">Our future ideas</div>
+      <!-- Divider -->
+      <div class="hidden sm:block w-[1px] h-16 bg-gradient-to-b from-transparent via-[#C9A239]/50 to-transparent"></div>
 
-      <div class="w-[90%] mx-auto text-justify my-10">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-          quisquam eligendi temporibus cum minus ab, ex sapiente deleniti
-          repellendus in officiis alias. Impedit modi dignissimos amet nulla
-          beatae, iusto earum dolor sunt nam quidem quos non corrupti dolorum
-          aspernatur fugit incidunt eius ullam illo accusantium maiores
-          architecto fugiat. Repudiandae neque quas magni odit! Necessitatibus
-          temporibus adipisci dolor officiis rem doloribus ut doloremque, optio
-          maiores impedit magnam blanditiis maxime officia distinctio at
-          excepturi deleniti tempora sapiente voluptatibus. Quisquam vero illo
-          nesciunt cupiditate! Nam saepe ipsam delectus tempora at quisquam
-          aliquam iusto nostrum? Corrupti, nisi. Doloribus sequi aliquam rerum
-          non expedita cumque. Qui ullam nisi eum exercitationem facere fuga
-          consequatur dignissimos sint possimus voluptas minus iusto eos itaque
-          iste veritatis, delectus ea fugit architecto at corporis sequi!
-          Officia libero architecto aspernatur deserunt voluptates voluptatibus
-          rerum voluptatum natus nulla temporibus delectus incidunt, saepe
-          minima, eius sit doloribus excepturi sunt quaerat sed? Libero rerum et
-          odio asperiores animi officiis necessitatibus id recusandae, iusto
-          quasi praesentium enim facere at magni inventore dolores. Quos
-          corporis ea eaque voluptatibus deleniti minima perferendis, nulla
-          tempore consequatur cupiditate pariatur dicta obcaecati possimus
-          laboriosam doloremque blanditiis molestias repudiandae nihil, velit,
-          incidunt minus! Veritatis temporibus, facere corrupti at nemo veniam
-          nostrum!
-        </p>
-      </div>
-      <!--karfarmaha  -->
-      <div class="divider my-10 w-[90%] mx-auto">Project Owner</div>
-      <div class="w-[90%] mx-auto">
-        <div class="swiper mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/1.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/2.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/4.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/5.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/6.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/1.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/2.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/4.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/5.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/6.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/1.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/2.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/4.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/5.png" />
-            </div>
-            <div class="swiper-slide swiper-slide2">
-              <img src="./src/image/karfarma/6.png" />
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+      <!-- Total -->
+      <div class="text-center group">
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <i class="fa-solid fa-chart-simple text-[#C9A239] text-lg"></i>
+          <span class="text-gray-400 text-xs tracking-[2px] uppercase">
+            Total Visitors
+          </span>
         </div>
+
+        <h3 class="text-3xl font-light tracking-[3px] text-[#e6c66e]">
+          86,542
+        </h3>
+
+        <div class="w-8 h-[1px] bg-[#C9A239]/60 mx-auto mt-4
+                    transition-all duration-500 group-hover:w-16"></div>
       </div>
+
     </div>
+
+    <p class="text-center text-[10px] text-gray-500 tracking-[3px] mt-10 uppercase">
+      GRANSA PARS · DIGITAL PRESENCE
+    </p>
+
+  </div>
+</section>
+
+
+      
+        <!-- دایره  -->
+  <div class="md:w-[80%] mx-auto flex md:justify-end justify-center">
+  <div class="w-50 h-50 relative">
+
+    <!-- نوشته چرخان -->
+    <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
+      <svg viewBox="0 0 200 200" class="w-full h-full">
+        <defs>
+          <path
+            id="circlePath"
+            d="M 100,100 m -72,0
+            a 72,72 0 1,1 144,0
+            a 72,72 0 1,1 -144,0"
+          />
+        </defs>
+
+        <text
+          fill="#0b4f59"
+          font-size="13"
+          font-weight="bold"
+          letter-spacing="3"
+        >
+          <textPath href="#circlePath">
+            GRANSA PARS . . . . WE BUILD THE FUTURE . . . .
+          </textPath>
+        </text>
+      </svg>
+    </div>
+
+    <!-- دایره و متن ثابت -->
+    <div class="absolute inset-0 flex items-center justify-center">
+     
+
+  <svg viewBox="0 0 120 120" class="w-31 h-31 drop-shadow-[1px_2px_2px_#0008]">
+
+    <defs>
+      <linearGradient id="goldSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff1a8" />
+        <stop offset="30%" stop-color="#d6ad43" />
+        <stop offset="60%" stop-color="#fff0a0" />
+        <stop offset="100%" stop-color="#91651b" />
+      </linearGradient>
+    </defs>
+
+    <!-- لبه دندانه دار -->
+    <path
+      d=" M60 1 L67 10 L78 4 L82 16 L95 12
+  L96 25 L109 27 L105 40 L118 47
+  L109 58 L118 69 L105 77 L109 91
+  L96 95 L95 108 L82 104 L78 116
+  L67 110 L60 120 L53 110 L42 116
+  L38 104 L25 108 L24 95 L11 91
+  L15 77 L2 69 L11 58 L2 47
+  L15 40 L11 27 L24 25 L25 12
+  L38 16 L42 4 L53 10 Z"
+      fill="#EFBF04"
+      stroke=""
+      stroke-width="1"
+      stroke-linejoin="miter"
+    />
+
+    <!-- حلقه داخلی -->
+    <circle cx="60" cy="60" r="44"
+      fill="#EFBF04"
+      stroke="#e7bc4c"
+      stroke-width=""
+      style="filter: drop-shadow(1px 1px 1px #000000aa)"
+    />
+
+   
+
+    <!-- متن مهر -->
+    <text
+      x="60"
+      y="60"
+      text-anchor="middle"
+      fill="#C2B067"
+      font-size="15"
+      font-weight="bold"
+      letter-spacing="3"
+        style="filter: drop-shadow(1px 1px 1px #272101)"
+
+    >
+      GRANSA
+    </text>
+
+    <text
+      x="60"
+      y="75"
+      text-anchor="middle"
+      fill="#C2B067"
+      font-size="15"
+      font-weight="bold"
+      letter-spacing="3"
+        style="filter: drop-shadow(1px 1px 1px #2b2402)"
+
+    >
+      PARS
+    </text>
+    <text
+      x="60"
+      y="95"
+      text-anchor="middle"
+      fill="#C2B067"
+      font-size="12"
+      font-weight="bold"
+      letter-spacing="1"
+      style="filter: drop-shadow(1px 1px 1px #201b01)"
+    >
+      1988
+    </text>
+
+  </svg>
+</div>
+   
+
+  </div>
+</div>
+
+        <!--karfarmaha  -->
+         <div class="divider mt-10 md:w-[75%] w-full mx-auto text-xl font-semibold">
+          Project Owner
+        </div>
+       <div class="md:bg-[#21656e21] bg-base-100 md:h-40 h-20 flex flex-col items-center justify-center">
+        
+        <div
+          class="md:w-[75%] md:h-20 md:mx-auto w-full h-auto border md:rounded-3xl border-gray-200 shadow-xl hero-slider bg-base-100 shadow-[#02292e]"
+        >
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/1.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/2.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/4.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/5.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/6.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/1.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/2.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/4.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/4.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/5.png" />
+              </div>
+              <div class="swiper-slide swiper-slide2">
+                <img class="" src="./src/image/karfarma/6.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+
+
+      
+
+      <!-- endof main -->
+    </main>
 
     <!-- footer -->
-    <div class="divider my-10 w-[90%] mx-auto">Contact Us</div>
+   
 
-    <div class="flex md:flex-row flex-col justify-center items-center gap-10 my-10">
 
-      <div class="bg-base-100">
-        <img src="./src/image/logo.png" class="w-60" />
-      </div>
-
-      <div class="w-60 flex flex-col gap-2">
-        <h2 class="text-xl md:flex hidden">Contact Info</h2>
-        <div class="divider"></div>
-        <p class="text-justify">
-          Tehran,marzdaran,haghighat-st,alvand-building,floor-6,Number-12
-        </p>
-        <h3>021-44598652</h3>
-        <h3>021-44500652</h3>
-        <h3>Gransapars@gmail.com</h3>
-      </div>
-
-    </div>
-
+  <footer class="relative z-20 footer sm:footer-horizontal bg-[#0d2427] text-[#aa8424] p-8">
+ 
+  <aside>
+    <img src="./src/image/logo/v2.png" class="w-25 h-18"/>
+    <p>
+      Gransa-Pars Industries Ltd.
+      <br />
+      Providing reliable tech since 1987
+    </p>
+  </aside>
+  <hr class="w-full h-1 md:hidden flex"/>
+   <aside>
   
-    <footer
-      class="footer footer-horizontal footer-center bg-black text-white rounded p-10 gap-4 flex flex-col justify-between"
-    >
-      <div>
-        <nav class="grid grid-flow-col gap-4">
-          <a class="link link-hover">About us</a>
-          <a class="link link-hover">Contact Us</a>
-          <a class="link link-hover">Projects</a>
-          <a class="link link-hover">Services</a>
-          <a class="link link-hover">News</a>
-        </nav>
-        <nav>
-          <div class="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                aria-label="Twitter"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current"
-              >
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                ></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                aria-label="YouTube"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current"
-              >
-                <path
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-                ></path>
-              </svg>
-            </a>
-            <a>
-              <svg
-                aria-label="Facebook"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                class="fill-current"
-              >
-                <path
-                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </nav>
-        <aside>
-          <p>Copyright © (2026) - All right reserved by SHABBAK CO.</p>
-        </aside>
-      </div>
-    </footer>
+    <div>
+      <p class="font-semibold">
+TEHRAN
+      </p>
+    </div>
+    <p>
+      Marzdaran , Alvand Building
+      <br />
+      Tel: 0214442221
+      <br/>
+      Fax: 0214442221
+       <br/>
+       Email: Gransa-pars@gmail.com
+      
+
+    </p>
+  </aside>
+  <aside>
+  
+    <div>
+   <p class="font-semibold">
+SHAHREKORD
+      </p>
+    </div>
+    <p>
+      Enghelab st. alvand Bilding
+      <br />
+      Tel: 0214442221
+      <br/>
+      Fax: 0214442221
+       <br/>
+       Email: Gransa-pars@gmail.com
+      
+    </p>
+  </aside>
+  <hr class="w-full h-1 md:hidden flex"/>
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover md:flex hidden">Branding</a>
+    <a class="link link-hover md:flex hidden">Design</a>
+    <a class="link link-hover md:flex hidden">Marketing</a>
+    <a class="link link-hover md:flex hidden">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover md:flex hidden">About us</a>
+    <a class="link link-hover md:flex hidden">Contact</a>
+    <a class="link link-hover md:flex hidden">Jobs</a>
+    <a class="link link-hover md:flex hidden">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover md:flex hidden">Terms of use</a>
+    <a class="link link-hover md:flex hidden">Privacy policy</a>
+    <a class="link link-hover md:flex hidden">Cookie policy</a>
+  </nav>
+
+</footer>
+<footer class="relative z-20 footer sm:footer-horizontal bg-[#0d2427] text-neutral-content items-center md:px-14 md:py-3">
+  <aside class="grid-flow-col items-center">
+       <p>Copyright © 2027 - All right reserved Gransa-Pars .Co<br/>
+       Designed by SHABBAK .CO</p>
+  </aside>
+  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a>
+      <svg
+        aria-label="Twitter"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        class="fill-current">
+        <path
+          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+      </svg>
+    </a>
+    <a>
+      <svg
+        aria-label="YouTube"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        class="fill-current">
+        <path
+          d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+      </svg>
+    </a>
+    <a>
+      <svg
+        aria-label="Facebook"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        class="fill-current">
+        <path
+          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+      </svg>
+    </a>
+  </nav>
+
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      // swiper
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
@@ -665,12 +1178,239 @@
 
       var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 8,
-        spaceBetween: 20,
+        spaceBetween: 8,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
         },
       });
+
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+      // باز و بسته شدن منوی اصلی
+      mobileMenuToggle.addEventListener("change", () => {
+        if (mobileMenuToggle.checked) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          document.body.style.overflow = "hidden";
+        } else {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+          document.body.style.overflow = "";
+        }
+      });
+
+      // بستن زیرمنوی قبلی هنگام باز شدن زیرمنوی جدید
+      const mobileDetails = mobileMenu.querySelectorAll("details");
+
+      mobileDetails.forEach((current) => {
+        current.querySelector("summary").addEventListener("click", () => {
+          mobileDetails.forEach((other) => {
+            if (other !== current) {
+              other.open = false;
+            }
+          });
+        });
+      });
+
+      // بستن منو با کلیک روی فضای خالی آن
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenuToggle.checked = false;
+          mobileMenuToggle.dispatchEvent(new Event("change"));
+        }
+      });
+
+      // animation cart
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            } else {
+              entry.target.classList.remove("show");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        },
+      );
+
+      document.querySelectorAll(".reveal").forEach((card) => {
+        observer.observe(card);
+      });
+
+      const roadPath = document.querySelector("#roadPath");
+      const loader = document.querySelector(".road-loader");
+      const roadSvg = document.querySelector(".road-svg");
+
+function moveLoader() {
+  if (!roadPath || !roadSvg || !loader) return;
+
+  const pathLength = roadPath.getTotalLength();
+
+  const maxScroll =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const scrollProgress =
+    maxScroll > 0 ? window.scrollY / maxScroll : 0;
+
+
+  // نمایش سال
+  const roadYear = document.getElementById("roadYear");
+
+const year = Math.round(1988 + scrollProgress * (2026 - 1988));
+roadYear.textContent = year;
+// 
+  const point = roadPath.getPointAtLength(
+    pathLength * scrollProgress
+  );
+
+  const svgPoint = roadSvg.createSVGPoint();
+  svgPoint.x = point.x;
+  svgPoint.y = point.y;
+
+  const screenPoint = svgPoint.matrixTransform(
+    roadSvg.getScreenCTM()
+  );
+
+  const svgRect = roadSvg.getBoundingClientRect();
+  const roadHalfWidth = 15 * Math.abs(
+    roadSvg.getScreenCTM().a
+  );
+
+  const targetPosition = loader.offsetWidth * 0.75;
+
+  // فاصله منو از بالای صفحه
+  const menuHeight =
+    document.querySelector(".navbar")?.getBoundingClientRect().height || 0;
+
+const targetY =
+  screenPoint.y +
+  13 * (1 - scrollProgress) +
+  menuHeight * (1 - 4.5 * scrollProgress);
+
+  loader.style.left =
+    `${screenPoint.x - roadHalfWidth - targetPosition + 4}px`;
+    loader.style.top =
+      `${targetY - loader.offsetHeight / 2}px`;
+      roadYear.style.top = `${targetY - 20}px`;
+  }
+
+
+window.addEventListener("scroll", moveLoader);
+window.addEventListener("resize", moveLoader);
+
+moveLoader();
+
+      // شرکت های زیرمجموعه
+      const subsidiaryBtn = document.getElementById("subsidiaryBtn");
+      const subsidiaryDropdown = document.getElementById("subsidiaryDropdown");
+      function positionDropdown() {
+        const menu = document.querySelector(".subsidiary-menu");
+        const rect = menu.getBoundingClientRect();
+
+        subsidiaryDropdown.style.left = `${-rect.left}px`;
+        subsidiaryDropdown.style.top = `${menu.offsetHeight + 20}px`;
+      }
+
+      window.addEventListener("resize", positionDropdown);
+      subsidiaryBtn.addEventListener("click", () => {
+        positionDropdown();
+        subsidiaryDropdown.classList.toggle("opacity-0");
+        subsidiaryDropdown.classList.toggle("invisible");
+        subsidiaryDropdown.classList.toggle("-translate-y-3");
+      });
+      document.addEventListener("click", (e) => {
+        if (
+          !subsidiaryBtn.contains(e.target) &&
+          !subsidiaryDropdown.contains(e.target)
+        ) {
+          subsidiaryDropdown.classList.add(
+            "opacity-0",
+            "invisible",
+            "-translate-y-3",
+          );
+        }
+      });
+      // مدیریت منوهای اصلی
+      const navbar = document.querySelector(".navbar");
+      const allDetails = navbar.querySelectorAll("details");
+
+      allDetails.forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          if (detail.open) {
+            allDetails.forEach((other) => {
+              if (other !== detail) {
+                other.open = false;
+              }
+            });
+
+            // بستن منوی شرکت‌های زیرمجموعه
+            subsidiaryDropdown.classList.add(
+              "opacity-0",
+              "invisible",
+              "-translate-y-3",
+            );
+          }
+        });
+      });
+
+      // بستن منوهای اصلی با کلیک بیرون
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".navbar-center")) {
+          allDetails.forEach((detail) => {
+            detail.open = false;
+          });
+        }
+      });
+
+      // سرعت اسلایدر هیرو
+      document.querySelectorAll(".swiper-slide video").forEach((video) => {
+        video.playbackRate = 0.8;
+      });
+// back to top
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.getElementById("backToTop");
+
+  if (!backToTop) return;
+
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("opacity-0", window.scrollY <= 120);
+    backToTop.classList.toggle("invisible", window.scrollY <= 120);
+
+    backToTop.classList.toggle("opacity-100", window.scrollY > 120);
+    backToTop.classList.toggle("visible", window.scrollY > 120);
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
     </script>
-    <script type="module" src="./src/js/index.js"></script>
+   <button
+  id="backToTop"
+  class="fixed left-4 bottom-15 z-[9999] w-10 h-10
+         rounded-xl bg-[#0b4f59] border border-amber-300
+         flex items-center justify-center
+         shadow-lg transition-all duration-500
+         hover:scale-110 opacity-0 invisible"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#C9A239"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M12 19V5" />
+    <path d="M5 12l7-7 7 7" />
+  </svg>
+</button>
   </body>
 </html>

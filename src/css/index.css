@@ -1,2 +1,115 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* اسکرول */
+/* Custom Road Scrollbar */
+.custom-road-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 7px;
+  width: 40px;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Yellow Road Marking */
+.road-track {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 15px,
+    #f4c542 15px 30px,
+    transparent 30px 40px
+  );
+  width: 2px;
+  margin: auto;
+}
+.road-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+@media (max-width: 1023px) {
+  .custom-road-scrollbar {
+    display: none;
+  }
+}
+/* Hide Default Scrollbar */
+@media (min-width: 1024px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* انیمیشن خطوط */
+.road-moving-lines {
+  animation: roadLinesMove 1s linear infinite;
+}
+
+@keyframes roadLinesMove {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+/* Komatsu Loader */
+
+.road-loader {
+  position: fixed;
+  width: 120px;
+  height: auto;
+  z-index: 10000;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* فیلتر روی اسلایدر کارفرمایان */
+.hero-slider img {
+  filter: grayscale(90%);
+  transition: filter 0.6s ease;
+}
+
+.hero-slider:hover img {
+  filter: grayscale(40%);
+}
+/* شرکت های زیرمجموعه */
+#subsidiaryDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  background: white;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+/* animation text hero */
+@theme {
+  --animate-revealText: revealText 1.2s ease-out forwards;
+
+  @keyframes revealText {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
